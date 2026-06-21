@@ -1,8 +1,8 @@
-\# Food Delivery Application
+# Food Delivery Application
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -14,85 +14,85 @@ The application is split into independent services responsible for user manageme
 
 
 
-\## Services
+## Services
 
 
 
-\### User Service
+### User Service
 
 
 
-\* User Registration
+* User Registration
 
-\* User Login
+* User Login
 
-\* JWT Token Generation
+* JWT Token Generation
 
-\* Role-Based Authorization
-
-
-
-\### Order Service
+* Role-Based Authorization
 
 
 
-\* Place Orders
-
-\* Validate Restaurants before ordering
-
-\* Communicate with Restaurant Service using OpenFeign
-
-\* Resilience4j Circuit Breaker and Retry
+### Order Service
 
 
 
-\### Restaurant Service
+* Place Orders
+
+* Validate Restaurants before ordering
+
+* Communicate with Restaurant Service using OpenFeign
+
+* Resilience4j Circuit Breaker and Retry
 
 
 
-\* Restaurant Management
-
-\* Menu Management
+### Restaurant Service
 
 
 
-\### API Gateway
+* Restaurant Management
+
+* Menu Management
 
 
 
-\* Single Entry Point for all services
+### API Gateway
 
 
 
-\## Technologies Used
+* Single Entry Point for all services
 
 
 
-\* Java 17
-
-\* Spring Boot
-
-\* Spring Security
-
-\* JWT Authentication
-
-\* Spring Data JPA
-
-\* PostgreSQL
-
-\* OpenFeign
-
-\* Resilience4j
-
-\* Docker
-
-\* Docker Compose
-
-\* Gradle
+## Technologies Used
 
 
 
-\## Security
+* Java 17
+
+* Spring Boot
+
+* Spring Security
+
+* JWT Authentication
+
+* Spring Data JPA
+
+* PostgreSQL
+
+* OpenFeign
+
+* Resilience4j
+
+* Docker
+
+* Docker Compose
+
+* Gradle
+
+
+
+## Security
 
 
 
@@ -100,21 +100,21 @@ Implemented JWT-based authentication and authorization using Spring Security.
 
 
 
-\### Features
+### Features
 
 
 
-\* Stateless Authentication
+* Stateless Authentication
 
-\* JWT Token Validation
+* JWT Token Validation
 
-\* BCrypt Password Encryption
+* BCrypt Password Encryption
 
-\* Role-Based Access Control
+* Role-Based Access Control
 
 
 
-\## Fault Tolerance
+## Fault Tolerance
 
 
 
@@ -122,33 +122,33 @@ Implemented Resilience4j in Order Service.
 
 
 
-\### Features
+### Features
 
 
 
-\* Retry Mechanism
+* Retry Mechanism
 
-\* Circuit Breaker Pattern
+* Circuit Breaker Pattern
 
-\* Fallback Handling
-
-
-
-\### Configuration
+* Fallback Handling
 
 
 
-\* Retry Attempts: 3
-
-\* Sliding Window Size: 5
-
-\* Failure Threshold: 50%
-
-\* Open State Duration: 10 Seconds
+### Configuration
 
 
 
-\## Dockerized Services
+* Retry Attempts: 3
+
+* Sliding Window Size: 5
+
+* Failure Threshold: 50%
+
+* Open State Duration: 10 Seconds
+
+
+
+## Dockerized Services
 
 
 
@@ -156,11 +156,11 @@ Currently Dockerized:
 
 
 
-\* User Service
+* User Service
 
-\* Order Service
+* Order Service
 
-\* PostgreSQL
+* PostgreSQL
 
 
 
@@ -168,35 +168,35 @@ Managed using Docker Compose.
 
 
 
-\### Run
+### Run
 
 
 
-```bash
+bash
 
 docker compose up --build
 
-```
 
 
 
-\## Future Enhancements
+
+## Future Enhancements
 
 
 
-\* Dockerize Restaurant Service
+* Dockerize Restaurant Service
 
-\* Dockerize API Gateway
+* Dockerize API Gateway
 
-\* Add Service Discovery
+* Add Service Discovery
 
-\* Add Monitoring and Logging
+* Add Monitoring and Logging
 
-\* Deploy to Cloud
+* Deploy to Cloud
 
 
 
-\## Learning Outcomes
+## Learning Outcomes
 
 
 
@@ -204,23 +204,23 @@ This project helped me gain hands-on experience with:
 
 
 
-\* Microservices Architecture
+* Microservices Architecture
 
-\* Spring Security
+* Spring Security
 
-\* JWT Authentication
+* JWT Authentication
 
-\* OpenFeign
+* OpenFeign
 
-\* Resilience4j
+* Resilience4j
 
-\* Docker
+* Docker
 
-\* Docker Compose
+* Docker Compose
 
-\* PostgreSQL Integration
+* PostgreSQL Integration
 
-\* Inter-Service Communication
+* Inter-Service Communication
 
 
 
