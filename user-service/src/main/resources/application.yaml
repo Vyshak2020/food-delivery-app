@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: user-service
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/user_service_db
+#    username: postgres
+#    password: vkdj@2000
+  datasource:
+    url: jdbc:postgresql://postgres-container:5432/db
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  driver-class-name: org.postgresql.Driver
+
+server:
+  port: 8080

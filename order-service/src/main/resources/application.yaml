@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:postgresql://postgres-container:5432/db
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8082
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      restaurantService:
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 2
+        minimumNumberOfCalls: 5
+
+  retry:
+    instances:
+      restaurantService:
+        maxAttempts: 3
+        waitDuration: 40s
+        retryExceptions:
+          - feign.RetryableException
+          - feign.FeignException$InternalServerError
+          - java.io.IOException
